@@ -7,4 +7,4 @@ This application provides prayer times data.
 ## APIs:
 * [Al Adhan](https://aladhan.com/prayer-times-api)
 ## Demo
-![](Demo/Demo2.gif)
+![](Demo/Demo1.gif)
