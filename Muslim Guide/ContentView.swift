@@ -18,7 +18,7 @@ struct ContentView: View {    @State private var selection = 0
                     .tabItem {
                         VStack {
                             Image(systemName: "clock").font(.title)
-                            Text("Prayer Time")
+                            Text("Prayer Times")
                         }
                     }
                 .tag(0)

@@ -63,10 +63,6 @@ class NotificationManger
             {
                 setNotification(Constants.prayers[4], getDateComponent(For: prayerTimes.Isha))
             }
-            
-             setNotification("test1", getDateComponent(For: "10:56 AM"))
-             setNotification("test2", getDateComponent(For: "10:58 AM"))
-             setNotification("test3", getDateComponent(For: "11:00 AM"))
         }
     }
     
