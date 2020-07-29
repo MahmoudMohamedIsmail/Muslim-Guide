@@ -9,7 +9,7 @@
 import Foundation
 import BackgroundTasks
 import RealmSwift
-class BackgroundManger {
+class BackgroundManager {
     
     static func registerBackgroundTasks()
     {
@@ -25,7 +25,7 @@ class BackgroundManger {
         guard let alarmState = getAlarmState() else {
                    return
                }
-        NotificationManger.scheduleNotifications(For: prayerTimes, alarmState)
+        NotificationManager.scheduleNotifications(For: prayerTimes, alarmState)
         
 //        //Todo Work
 //        /*
@@ -42,8 +42,8 @@ class BackgroundManger {
     static func scheduleNotifications(){
         
         let request = BGAppRefreshTaskRequest(identifier: Constants.appRefresh)
-        request.earliestBeginDate = Date(timeIntervalSinceNow: 86400) // request task every day(86400 = 24*60*60) .
-        
+       // request.earliestBeginDate = Date(timeIntervalSinceNow: 86400) // request task every day(86400 = 24*60*60) .
+         request.earliestBeginDate = Date(timeIntervalSinceNow: 120) // request task every day(86400 = 24*60*60) .
         do {
             try BGTaskScheduler.shared.submit(request)
         } catch {
@@ -63,10 +63,10 @@ class BackgroundManger {
         if let currentCityObjects = realm.objects(CurrentCity.self).last
         {
             let feachedCity = realm.objects(City.self).filter("name == %@", currentCityObjects.name)
-            let calendar = feachedCity.last?.calendar.filter("year == %@", TimeManger.getYearNumber())
-            let prayerTimes = calendar?.filter("month == %@",TimeManger.getMonthNumber()).last
+            let calendar = feachedCity.last?.calendar.filter("year == %@", TimeManager.getYearNumber())
+            let prayerTimes = calendar?.filter("month == %@",TimeManager.getMonthNumber()).last
             
-            return prayerTimes?.prayerTimes[TimeManger.getDayNumber()-1]
+            return prayerTimes?.prayerTimes[TimeManager.getDayNumber()-1]
             
         }
         

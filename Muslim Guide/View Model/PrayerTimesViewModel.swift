@@ -56,7 +56,7 @@ class PrayerTimesViewModel: NSObject, ObservableObject {
         didSet{
             updateAlarmStateDB(indexPrayerTime: updateAlarmSatate ?? -1)
             guard let prayerTimes = todayPrayerTimes else {return}
-            NotificationManger.scheduleNotifications(For: prayerTimes, alarmState)
+            NotificationManager.scheduleNotifications(For: prayerTimes, alarmState)
         }
     }
     @Published var currentCity = CurrentCity()
@@ -69,7 +69,7 @@ class PrayerTimesViewModel: NSObject, ObservableObject {
             
             alarmState = self.realm.objects(AlarmState.self).last!
             
-           NotificationManger.scheduleNotifications(For: todayPrayerTimes!, alarmState)
+           NotificationManager.scheduleNotifications(For: todayPrayerTimes!, alarmState)
             
             setNextPrayer()
             startRemainingTime()
@@ -82,7 +82,7 @@ class PrayerTimesViewModel: NSObject, ObservableObject {
         locationManger.delegate = self
         locationManger.requestWhenInUseAuthorization()
         
-        NotificationManger.requestPermission()
+        NotificationManager.requestPermission()
         
         startEarthRotation()
         prepearData()
@@ -100,7 +100,7 @@ class PrayerTimesViewModel: NSObject, ObservableObject {
             if let calendar=calendar
             {
                 DispatchQueue.main.async {
-                    let today = TimeManger.getDayNumber()
+                    let today = TimeManager.getDayNumber()
                     let newCalendar = HelperFunctions.eraseBST(calendar: calendar)
                     self.savingData(calendar: newCalendar, cityName: self.currentCity)
                     self.todayPrayerTimes=HelperFunctions.castingData(from: newCalendar.data[today-1].timings)
@@ -145,7 +145,6 @@ extension PrayerTimesViewModel:CLLocationManagerDelegate
     }
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
-        
     }
     
 }
@@ -180,9 +179,9 @@ extension PrayerTimesViewModel
     }
     func getTodayPrayerTimes(for city:String) -> Bool {
         let feachedCity = realm.objects(City.self).filter("name == %@", city)
-        let calendar = feachedCity.last?.calendar.filter("year == %@", TimeManger.getYearNumber())
-        let prayerTimes = calendar?.filter("month == %@",TimeManger.getMonthNumber()).last
-        todayPrayerTimes=prayerTimes?.prayerTimes[TimeManger.getDayNumber()-1]
+        let calendar = feachedCity.last?.calendar.filter("year == %@", TimeManager.getYearNumber())
+        let prayerTimes = calendar?.filter("month == %@",TimeManager.getMonthNumber()).last
+        todayPrayerTimes=prayerTimes?.prayerTimes[TimeManager.getDayNumber()-1]
         return (todayPrayerTimes != nil) ? true:false
     }
     
@@ -261,20 +260,20 @@ extension PrayerTimesViewModel
     func getNextPrayerIndex() -> Int{
         
         // date now by minutes
-        let now = (TimeManger.getHourNumber() * 60) + TimeManger.getMinuteNumber()
+        let now = (TimeManager.getHourNumber() * 60) + TimeManager.getMinuteNumber()
         
         // date for all prayers by minutes
-        let Fajr = (Int( TimeManger.convertTimeFormatTo_24(time: todayPrayerTimes!.Fajr).components(separatedBy: ":")[0])! * 60) + Int( TimeManger.convertTimeFormatTo_24(time: todayPrayerTimes!.Fajr).components(separatedBy: ":")[1])!
+        let Fajr = (Int( TimeManager.convertTimeFormatTo_24(time: todayPrayerTimes!.Fajr).components(separatedBy: ":")[0])! * 60) + Int( TimeManager.convertTimeFormatTo_24(time: todayPrayerTimes!.Fajr).components(separatedBy: ":")[1])!
         
         //        let Sunrise = (Int( TimeManger.convertTimeFormatTo_24(time: todayPrayerTimes!.Sunrise).components(separatedBy: ":")[0])! * 60) + Int( TimeManger.convertTimeFormatTo_24(time: todayPrayerTimes!.Sunrise).components(separatedBy: ":")[1])!
         
-        let Dhuhr = (Int( TimeManger.convertTimeFormatTo_24(time: todayPrayerTimes!.Dhuhr).components(separatedBy: ":")[0])! * 60) + Int( TimeManger.convertTimeFormatTo_24(time: todayPrayerTimes!.Dhuhr).components(separatedBy: ":")[1])!
+        let Dhuhr = (Int( TimeManager.convertTimeFormatTo_24(time: todayPrayerTimes!.Dhuhr).components(separatedBy: ":")[0])! * 60) + Int( TimeManager.convertTimeFormatTo_24(time: todayPrayerTimes!.Dhuhr).components(separatedBy: ":")[1])!
         
-        let Asr = (Int( TimeManger.convertTimeFormatTo_24(time: todayPrayerTimes!.Asr).components(separatedBy: ":")[0])! * 60) + Int( TimeManger.convertTimeFormatTo_24(time: todayPrayerTimes!.Asr).components(separatedBy: ":")[1])!
+        let Asr = (Int( TimeManager.convertTimeFormatTo_24(time: todayPrayerTimes!.Asr).components(separatedBy: ":")[0])! * 60) + Int( TimeManager.convertTimeFormatTo_24(time: todayPrayerTimes!.Asr).components(separatedBy: ":")[1])!
         
-        let Maghrib = (Int( TimeManger.convertTimeFormatTo_24(time: todayPrayerTimes!.Maghrib).components(separatedBy: ":")[0])! * 60) + Int( TimeManger.convertTimeFormatTo_24(time: todayPrayerTimes!.Maghrib).components(separatedBy: ":")[1])!
+        let Maghrib = (Int( TimeManager.convertTimeFormatTo_24(time: todayPrayerTimes!.Maghrib).components(separatedBy: ":")[0])! * 60) + Int( TimeManager.convertTimeFormatTo_24(time: todayPrayerTimes!.Maghrib).components(separatedBy: ":")[1])!
         
-        let Isha = (Int( TimeManger.convertTimeFormatTo_24(time: todayPrayerTimes!.Isha).components(separatedBy: ":")[0])! * 60) + Int( TimeManger.convertTimeFormatTo_24(time: todayPrayerTimes!.Isha).components(separatedBy: ":")[1])!
+        let Isha = (Int( TimeManager.convertTimeFormatTo_24(time: todayPrayerTimes!.Isha).components(separatedBy: ":")[0])! * 60) + Int( TimeManager.convertTimeFormatTo_24(time: todayPrayerTimes!.Isha).components(separatedBy: ":")[1])!
         
         var prayer = 0
         
@@ -300,7 +299,7 @@ extension PrayerTimesViewModel
     func setNextPrayer() {
         let indexPrayer = getNextPrayerIndex()
         let prayer = Constants.prayers[indexPrayer]
-        nextPrayer = NextPrayer(name: prayer , count: indexPrayer, remainingTime: TimeManger.getRemainingTime(prayerTime: HelperFunctions.getPrayerTime(prayerName: prayer, prayerTimes: todayPrayerTimes!)))
+        nextPrayer = NextPrayer(name: prayer , count: indexPrayer, remainingTime: TimeManager.getRemainingTime(prayerTime: HelperFunctions.getPrayerTime(prayerName: prayer, prayerTimes: todayPrayerTimes!)))
     }
     
     func startRemainingTime() {
@@ -322,7 +321,7 @@ extension PrayerTimesViewModel
             nextPrayer?.count %= 6
             let count = nextPrayer?.count
             let name = Constants.prayers[nextPrayer!.count]
-            nextPrayer = NextPrayer(name: name, count: count!, remainingTime: TimeManger.getRemainingTime(prayerTime: HelperFunctions.getPrayerTime(prayerName: name, prayerTimes: todayPrayerTimes!)))
+            nextPrayer = NextPrayer(name: name, count: count!, remainingTime: TimeManager.getRemainingTime(prayerTime: HelperFunctions.getPrayerTime(prayerName: name, prayerTimes: todayPrayerTimes!)))
         }
     }
 }

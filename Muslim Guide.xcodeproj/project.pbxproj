@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8D54A490B53631CBACF6B410 /* Pods_Muslim_Guide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D395EE8A7456E1CEA3BED63D /* Pods_Muslim_Guide.framework */; };
+		BD07A3C824CD385A001681F8 /* UIScreen+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07A3C724CD385A001681F8 /* UIScreen+Ext.swift */; };
+		BD07A3CA24CD3A51001681F8 /* CLLocation+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07A3C924CD3A51001681F8 /* CLLocation+Ext.swift */; };
+		BD07A3CC24CD3BBE001681F8 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07A3CB24CD3BBE001681F8 /* CGFloat+Ext.swift */; };
+		BD07A3CE24CD47C2001681F8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07A3CD24CD47C2001681F8 /* LocationManager.swift */; };
+		BD07A3D024CD5BD5001681F8 /* QiblaDirectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD07A3CF24CD5BD5001681F8 /* QiblaDirectionView.swift */; };
+		BD87B23524CFCD1700B60361 /* QiblaDirectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87B23424CFCD1700B60361 /* QiblaDirectionViewModel.swift */; };
+		BDAA4B1324D12C44002D4D1C /* Demo2.gif in Resources */ = {isa = PBXBuildFile; fileRef = BDAA4B1224D12C44002D4D1C /* Demo2.gif */; };
 		BDC4BFA024C7F27C000E2A7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4BF9F24C7F27C000E2A7B /* AppDelegate.swift */; };
 		BDC4BFA224C7F27C000E2A7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4BFA124C7F27C000E2A7B /* SceneDelegate.swift */; };
 		BDC4BFA424C7F27C000E2A7B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4BFA324C7F27C000E2A7B /* ContentView.swift */; };
@@ -15,9 +22,9 @@
 		BDC4BFA924C7F28A000E2A7B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDC4BFA824C7F28A000E2A7B /* Preview Assets.xcassets */; };
 		BDC4BFAC24C7F28A000E2A7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC4BFAA24C7F28A000E2A7B /* LaunchScreen.storyboard */; };
 		BDC4BFC024C7F5C9000E2A7B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4BFB824C7F5C7000E2A7B /* Constants.swift */; };
-		BDC4BFC224C7F5C9000E2A7B /* TimeManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4BFBA24C7F5C8000E2A7B /* TimeManger.swift */; };
+		BDC4BFC224C7F5C9000E2A7B /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4BFBA24C7F5C8000E2A7B /* TimeManager.swift */; };
 		BDC4BFC324C7F5C9000E2A7B /* PrayerCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4BFBB24C7F5C8000E2A7B /* PrayerCalendar.swift */; };
-		BDC4BFC424C7F5C9000E2A7B /* NotificationManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4BFBC24C7F5C8000E2A7B /* NotificationManger.swift */; };
+		BDC4BFC424C7F5C9000E2A7B /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4BFBC24C7F5C8000E2A7B /* NotificationManager.swift */; };
 		BDC4BFC524C7F5C9000E2A7B /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4BFBD24C7F5C8000E2A7B /* HelperFunctions.swift */; };
 		BDC4BFC624C7F5C9000E2A7B /* NextPrayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4BFBE24C7F5C8000E2A7B /* NextPrayer.swift */; };
 		BDC4BFC724C7F5C9000E2A7B /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4BFBF24C7F5C9000E2A7B /* Coordinate.swift */; };
@@ -30,16 +37,21 @@
 		BDC4BFD524C80D14000E2A7B /* PrayerTimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4BFD424C80D14000E2A7B /* PrayerTimesView.swift */; };
 		BDC4BFDC24C80DA9000E2A7B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4BFDB24C80DA9000E2A7B /* Service.swift */; };
 		BDC4BFDE24C80DEF000E2A7B /* azahn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDC4BFDD24C80DEF000E2A7B /* azahn.mp3 */; };
-		BDC4BFE024C810B7000E2A7B /* BackgroundManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4BFDF24C810B7000E2A7B /* BackgroundManger.swift */; };
+		BDC4BFE024C810B7000E2A7B /* BackgroundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4BFDF24C810B7000E2A7B /* BackgroundManager.swift */; };
 		BDC4BFE424C81D35000E2A7B /* PrayerTimesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4BFE324C81D35000E2A7B /* PrayerTimesViewModel.swift */; };
-		BDC89BA524C95DB500B30684 /* Demo2.gif in Resources */ = {isa = PBXBuildFile; fileRef = BDC89BA224C95DAF00B30684 /* Demo2.gif */; };
 		BDC89BA624C95DB500B30684 /* Demo1.gif in Resources */ = {isa = PBXBuildFile; fileRef = BDC89BA324C95DB100B30684 /* Demo1.gif */; };
-		BDC89BA724C95DB500B30684 /* ScreenShot.PNG in Resources */ = {isa = PBXBuildFile; fileRef = BDC89BA424C95DB500B30684 /* ScreenShot.PNG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1504496706D4B834C5222B9D /* Pods-Muslim Guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muslim Guide.release.xcconfig"; path = "Target Support Files/Pods-Muslim Guide/Pods-Muslim Guide.release.xcconfig"; sourceTree = "<group>"; };
 		23F9F0D1CD1F17E75D4BE925 /* Pods-Muslim Guide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muslim Guide.debug.xcconfig"; path = "Target Support Files/Pods-Muslim Guide/Pods-Muslim Guide.debug.xcconfig"; sourceTree = "<group>"; };
+		BD07A3C724CD385A001681F8 /* UIScreen+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Ext.swift"; sourceTree = "<group>"; };
+		BD07A3C924CD3A51001681F8 /* CLLocation+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Ext.swift"; sourceTree = "<group>"; };
+		BD07A3CB24CD3BBE001681F8 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
+		BD07A3CD24CD47C2001681F8 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		BD07A3CF24CD5BD5001681F8 /* QiblaDirectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiblaDirectionView.swift; sourceTree = "<group>"; };
+		BD87B23424CFCD1700B60361 /* QiblaDirectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiblaDirectionViewModel.swift; sourceTree = "<group>"; };
+		BDAA4B1224D12C44002D4D1C /* Demo2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo2.gif; sourceTree = "<group>"; };
 		BDC4BF9C24C7F27C000E2A7B /* Muslim Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Muslim Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC4BF9F24C7F27C000E2A7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDC4BFA124C7F27C000E2A7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,9 +61,9 @@
 		BDC4BFAB24C7F28A000E2A7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDC4BFAD24C7F28A000E2A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDC4BFB824C7F5C7000E2A7B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		BDC4BFBA24C7F5C8000E2A7B /* TimeManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeManger.swift; sourceTree = "<group>"; };
+		BDC4BFBA24C7F5C8000E2A7B /* TimeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
 		BDC4BFBB24C7F5C8000E2A7B /* PrayerCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerCalendar.swift; sourceTree = "<group>"; };
-		BDC4BFBC24C7F5C8000E2A7B /* NotificationManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManger.swift; sourceTree = "<group>"; };
+		BDC4BFBC24C7F5C8000E2A7B /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		BDC4BFBD24C7F5C8000E2A7B /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		BDC4BFBE24C7F5C8000E2A7B /* NextPrayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextPrayer.swift; sourceTree = "<group>"; };
 		BDC4BFBF24C7F5C9000E2A7B /* Coordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
@@ -64,11 +76,9 @@
 		BDC4BFD424C80D14000E2A7B /* PrayerTimesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTimesView.swift; sourceTree = "<group>"; };
 		BDC4BFDB24C80DA9000E2A7B /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		BDC4BFDD24C80DEF000E2A7B /* azahn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = azahn.mp3; sourceTree = "<group>"; };
-		BDC4BFDF24C810B7000E2A7B /* BackgroundManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundManger.swift; sourceTree = "<group>"; };
+		BDC4BFDF24C810B7000E2A7B /* BackgroundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundManager.swift; sourceTree = "<group>"; };
 		BDC4BFE324C81D35000E2A7B /* PrayerTimesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrayerTimesViewModel.swift; sourceTree = "<group>"; };
-		BDC89BA224C95DAF00B30684 /* Demo2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo2.gif; sourceTree = "<group>"; };
 		BDC89BA324C95DB100B30684 /* Demo1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo1.gif; sourceTree = "<group>"; };
-		BDC89BA424C95DB500B30684 /* ScreenShot.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot.PNG; sourceTree = "<group>"; };
 		D395EE8A7456E1CEA3BED63D /* Pods_Muslim_Guide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muslim_Guide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,6 +111,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BD07A3C624CD37DA001681F8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BD07A3C724CD385A001681F8 /* UIScreen+Ext.swift */,
+				BD07A3C924CD3A51001681F8 /* CLLocation+Ext.swift */,
+				BD07A3CB24CD3BBE001681F8 /* CGFloat+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		BDC4BF9324C7F27C000E2A7B = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +147,7 @@
 				BDC4BFB424C7F388000E2A7B /* View */,
 				BDC4BFB524C7F3A6000E2A7B /* View Model */,
 				BDC4BFDA24C80D8D000E2A7B /* Services */,
+				BD07A3C624CD37DA001681F8 /* Extension */,
 				BDC4BFDD24C80DEF000E2A7B /* azahn.mp3 */,
 				BDC4BF9F24C7F27C000E2A7B /* AppDelegate.swift */,
 				BDC4BFA124C7F27C000E2A7B /* SceneDelegate.swift */,
@@ -160,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				BDC4BFD424C80D14000E2A7B /* PrayerTimesView.swift */,
+				BD07A3CF24CD5BD5001681F8 /* QiblaDirectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				BDC4BFE324C81D35000E2A7B /* PrayerTimesViewModel.swift */,
+				BD87B23424CFCD1700B60361 /* QiblaDirectionViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -179,10 +202,11 @@
 				BDC4BFBF24C7F5C9000E2A7B /* Coordinate.swift */,
 				BDC4BFBD24C7F5C8000E2A7B /* HelperFunctions.swift */,
 				BDC4BFBE24C7F5C8000E2A7B /* NextPrayer.swift */,
-				BDC4BFBC24C7F5C8000E2A7B /* NotificationManger.swift */,
+				BDC4BFBC24C7F5C8000E2A7B /* NotificationManager.swift */,
 				BDC4BFBB24C7F5C8000E2A7B /* PrayerCalendar.swift */,
-				BDC4BFBA24C7F5C8000E2A7B /* TimeManger.swift */,
-				BDC4BFDF24C810B7000E2A7B /* BackgroundManger.swift */,
+				BDC4BFBA24C7F5C8000E2A7B /* TimeManager.swift */,
+				BDC4BFDF24C810B7000E2A7B /* BackgroundManager.swift */,
+				BD07A3CD24CD47C2001681F8 /* LocationManager.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -211,9 +235,8 @@
 		BDC89BA124C95CC300B30684 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				BDAA4B1224D12C44002D4D1C /* Demo2.gif */,
 				BDC89BA324C95DB100B30684 /* Demo1.gif */,
-				BDC89BA224C95DAF00B30684 /* Demo2.gif */,
-				BDC89BA424C95DB500B30684 /* ScreenShot.PNG */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -281,10 +304,9 @@
 				BDC4BFAC24C7F28A000E2A7B /* LaunchScreen.storyboard in Resources */,
 				BDC4BFDE24C80DEF000E2A7B /* azahn.mp3 in Resources */,
 				BDC4BFA924C7F28A000E2A7B /* Preview Assets.xcassets in Resources */,
-				BDC89BA524C95DB500B30684 /* Demo2.gif in Resources */,
 				BDC4BFA624C7F28A000E2A7B /* Assets.xcassets in Resources */,
-				BDC89BA724C95DB500B30684 /* ScreenShot.PNG in Resources */,
 				BDC89BA624C95DB500B30684 /* Demo1.gif in Resources */,
+				BDAA4B1324D12C44002D4D1C /* Demo2.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,18 +367,24 @@
 				BDC4BFC324C7F5C9000E2A7B /* PrayerCalendar.swift in Sources */,
 				BDC4BFA224C7F27C000E2A7B /* SceneDelegate.swift in Sources */,
 				BDC4BFA424C7F27C000E2A7B /* ContentView.swift in Sources */,
-				BDC4BFC424C7F5C9000E2A7B /* NotificationManger.swift in Sources */,
+				BDC4BFC424C7F5C9000E2A7B /* NotificationManager.swift in Sources */,
 				BDC4BFDC24C80DA9000E2A7B /* Service.swift in Sources */,
+				BD07A3CE24CD47C2001681F8 /* LocationManager.swift in Sources */,
 				BDC4BFC724C7F5C9000E2A7B /* Coordinate.swift in Sources */,
 				BDC4BFD324C80BB3000E2A7B /* PrayerTimesDB.swift in Sources */,
-				BDC4BFC224C7F5C9000E2A7B /* TimeManger.swift in Sources */,
+				BDC4BFC224C7F5C9000E2A7B /* TimeManager.swift in Sources */,
+				BD07A3D024CD5BD5001681F8 /* QiblaDirectionView.swift in Sources */,
+				BD07A3CA24CD3A51001681F8 /* CLLocation+Ext.swift in Sources */,
 				BDC4BFC024C7F5C9000E2A7B /* Constants.swift in Sources */,
-				BDC4BFE024C810B7000E2A7B /* BackgroundManger.swift in Sources */,
+				BDC4BFE024C810B7000E2A7B /* BackgroundManager.swift in Sources */,
 				BDC4BFD124C7F79C000E2A7B /* City.swift in Sources */,
+				BD07A3C824CD385A001681F8 /* UIScreen+Ext.swift in Sources */,
 				BDC4BFC524C7F5C9000E2A7B /* HelperFunctions.swift in Sources */,
 				BDC4BFE424C81D35000E2A7B /* PrayerTimesViewModel.swift in Sources */,
 				BDC4BFC624C7F5C9000E2A7B /* NextPrayer.swift in Sources */,
 				BDC4BFCF24C7F79C000E2A7B /* CurrentCity.swift in Sources */,
+				BD87B23524CFCD1700B60361 /* QiblaDirectionViewModel.swift in Sources */,
+				BD07A3CC24CD3BBE001681F8 /* CGFloat+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

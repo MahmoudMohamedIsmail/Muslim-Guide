@@ -18,15 +18,15 @@ class HelperFunctions {
         for timings in calendar.data
         {
             // erase and convert time format to AM and PM
-            let Fajr =  TimeManger.convertTimeFormatTo_12_AM(time: timings.timings.Fajr.components(separatedBy: " ")[0])
-            let Sunrise = TimeManger.convertTimeFormatTo_12_AM(time: timings.timings.Sunrise.components(separatedBy: " ")[0])
-            let Dhuhr = TimeManger.convertTimeFormatTo_12_AM(time: timings.timings.Dhuhr.components(separatedBy: " ")[0])
-            let Asr = TimeManger.convertTimeFormatTo_12_AM(time: timings.timings.Asr.components(separatedBy: " ")[0])
-            let Sunset = TimeManger.convertTimeFormatTo_12_AM(time: timings.timings.Sunset.components(separatedBy: " ")[0])
-            let Maghrib = TimeManger.convertTimeFormatTo_12_AM(time: timings.timings.Maghrib.components(separatedBy: " ")[0])
-            let Isha = TimeManger.convertTimeFormatTo_12_AM(time: timings.timings.Isha.components(separatedBy: " ")[0])
-            let Imsak = TimeManger.convertTimeFormatTo_12_AM(time: timings.timings.Imsak.components(separatedBy: " ")[0])
-            let Midnight = TimeManger.convertTimeFormatTo_12_AM(time: timings.timings.Midnight.components(separatedBy: " ")[0])
+            let Fajr =  TimeManager.convertTimeFormatTo_12_AM(time: timings.timings.Fajr.components(separatedBy: " ")[0])
+            let Sunrise = TimeManager.convertTimeFormatTo_12_AM(time: timings.timings.Sunrise.components(separatedBy: " ")[0])
+            let Dhuhr = TimeManager.convertTimeFormatTo_12_AM(time: timings.timings.Dhuhr.components(separatedBy: " ")[0])
+            let Asr = TimeManager.convertTimeFormatTo_12_AM(time: timings.timings.Asr.components(separatedBy: " ")[0])
+            let Sunset = TimeManager.convertTimeFormatTo_12_AM(time: timings.timings.Sunset.components(separatedBy: " ")[0])
+            let Maghrib = TimeManager.convertTimeFormatTo_12_AM(time: timings.timings.Maghrib.components(separatedBy: " ")[0])
+            let Isha = TimeManager.convertTimeFormatTo_12_AM(time: timings.timings.Isha.components(separatedBy: " ")[0])
+            let Imsak = TimeManager.convertTimeFormatTo_12_AM(time: timings.timings.Imsak.components(separatedBy: " ")[0])
+            let Midnight = TimeManager.convertTimeFormatTo_12_AM(time: timings.timings.Midnight.components(separatedBy: " ")[0])
             
             let newTimings = Timings(Fajr: Fajr, Sunrise: Sunrise, Dhuhr: Dhuhr, Asr: Asr, Sunset: Sunset, Maghrib: Maghrib, Isha: Isha, Imsak: Imsak, Midnight: Midnight)
             

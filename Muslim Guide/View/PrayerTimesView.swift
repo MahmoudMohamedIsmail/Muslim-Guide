@@ -146,9 +146,3 @@ struct EarthRotationView:View {
 //        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
 //    }
 //}
-//MARK: - Extension to add two property (screenWidth and Height)
-extension UIScreen {
-    static let screenWidth = UIScreen.main.bounds.size.width
-    static let screenHeight = UIScreen.main.bounds.size.height
-}
-

@@ -8,7 +8,8 @@
 
 import SwiftUI
 
-struct ContentView: View {    @State private var selection = 0
+struct ContentView: View {
+    @State private var selection = 0
         init() {
           
         }
@@ -22,16 +23,14 @@ struct ContentView: View {    @State private var selection = 0
                         }
                     }
                 .tag(0)
-                            
-    //            Text("Second View")
-    //                .font(.title)
-    //                .tabItem {
-    //                    VStack {
-    //                        Image("second")
-    //                        Text("Second")
-    //                    }
-    //                }
-    //                .tag(1)
+                QiblaDirectionView()
+                    .tabItem {
+                        VStack {
+                            Image(systemName: "safari").font(.title)
+                            Text("Qibla")
+                        }
+                    }
+                    .tag(1)
             }
         }
 
